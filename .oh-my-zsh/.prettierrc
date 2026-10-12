@@ -1,0 +1,10 @@
+{
+  "printWidth": 100,
+  "proseWrap": "always",
+  "tabWidth": "2",
+  "endOfLine": "lf",
+  "semi": false,
+  "singleQuote": true,
+  "trainlingComma": "all",
+  "overrides": true
+}
