@@ -1,0 +1,230 @@
+
+/* =========================================================
+   KANTO MONOCHROME // BATMAN HUD
+   Compact modules + silver glow
+   ========================================================= */
+
+/* GLOBAL */
+
+@import "themes/dark.css";
+
+* {
+    font-family: "Cascadia Code", "Symbols Nerd Font";
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 0;
+    border: none;
+    border-radius: 4px;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* WAYBAR */
+
+window#waybar {
+    background: transparent;
+    color: @fg;
+}
+
+/* MODULE BASE */
+
+#custom-bat,
+#workspaces,
+#custom-local-ip,
+#network,
+#custom-bluetooth,
+#custom-updates,
+#clock,
+#custom-power {
+    margin: 2px 3px;
+    padding: 0 9px;
+    min-height: 28px;
+    color: @fg;
+    background: @bg_1;
+    border-radius: 4px;
+
+    /* Soft silver shadow */
+    box-shadow:
+        0 0 3px alpha(@rosewater, 0.20),
+        0 2px 5px alpha(@shadow, 0.65);
+
+    transition:
+        background 150ms ease,
+        color 150ms ease,
+        box-shadow 150ms ease;
+}
+
+/* BAT LOGO */
+
+#custom-bat {
+    color: @lavender;
+    background: @surface1;
+    font-size: 25px;
+    padding: 0 11px;
+    margin-right: 4px;
+
+    box-shadow:
+        0 0 5px alpha(@rosewater, 0.30),
+        0 2px 7px alpha(@shadow, 0.70);
+}
+
+#custom-bat:hover {
+    color: @crust;
+    background: @rosewater;
+
+    box-shadow:
+        0 0 8px alpha(@rosewater, 0.50),
+        0 2px 7px alpha(@shadow, 0.70);
+}
+
+/* WORKSPACES */
+
+#workspaces {
+    padding: 0 4px;
+    background: @mantle;
+}
+
+#workspaces button {
+    color: @subtext0;
+    background: transparent;
+    font-size: 14px;
+    padding: 0 9px;
+    margin: 3px 2px;
+    border-radius: 4px;
+    box-shadow: none;
+
+    transition:
+        background 150ms ease,
+        color 150ms ease;
+}
+
+#workspaces button:hover {
+    color: @text;
+    background: @surface1;
+}
+
+#workspaces button.active {
+    color: @crust;
+    background: @lavender;
+
+    box-shadow:
+        0 0 5px alpha(@rosewater, 0.35);
+}
+
+#workspaces button.urgent {
+    color: @crust;
+    background: @red;
+}
+
+/* CENTER // LOCAL IP */
+
+#custom-local-ip {
+    background: @base;
+    color: @rosewater;
+    padding: 0 13px;
+
+    box-shadow:
+        0 0 5px alpha(@rosewater, 0.22),
+        0 2px 6px alpha(@shadow, 0.70);
+}
+
+/* NETWORK */
+
+#network {
+    background: @mantle;
+    color: @text;
+    font-size: 15px;
+}
+
+#network.wifi {
+    color: @sky;
+}
+
+#network.ethernet {
+    color: @lavender;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+/* BLUETOOTH */
+
+#custom-bluetooth {
+    background: @surface0;
+    color: @lavender;
+    font-size: 15px;
+}
+
+#custom-bluetooth:hover {
+    color: @rosewater;
+    background: @surface1;
+}
+
+/* UPDATES */
+
+#custom-updates {
+    background: @mantle;
+    color: @text;
+    font-size: 15px;
+}
+
+#custom-updates:hover {
+    color: @lavender;
+    background: @surface1;
+}
+
+/* CLOCK */
+
+#clock {
+    background: @base;
+    color: @rosewater;
+    font-size: 14px;
+    padding: 0 11px;
+}
+
+#clock:hover {
+    color: @lavender;
+    background: @surface1;
+}
+
+/* POWER */
+
+#custom-power {
+    color: @red;
+    background: @surface1;
+    font-size: 21px;
+    padding: 0 11px;
+    margin-left: 4px;
+
+    box-shadow:
+        0 0 5px alpha(@rosewater, 0.24),
+        0 2px 6px alpha(@shadow, 0.70);
+}
+
+#custom-power:hover {
+    color: @crust;
+    background: @red;
+
+    box-shadow:
+        0 0 8px alpha(@red, 0.40);
+}
+
+/* TOOLTIPS */
+
+tooltip {
+    background: @crust;
+    color: @text;
+    border: 1px solid @surface1;
+    border-radius: 4px;
+    padding: 5px;
+
+    box-shadow:
+        0 0 6px alpha(@rosewater, 0.20);
+}
+
+tooltip label {
+    color: @text;
+    padding: 3px;
+    font-size: 12px;
+}

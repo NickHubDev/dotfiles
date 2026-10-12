@@ -1,0 +1,7 @@
+show=drun
+width=600
+height=400
+prompt=Buscar...
+allow_images=true
+insensitive=true
+term=kitty

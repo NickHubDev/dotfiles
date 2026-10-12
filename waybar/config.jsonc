@@ -1,0 +1,105 @@
+
+{
+  "layer": "top",
+  "position": "top",
+  "height": 42,
+  "spacing": 6,
+  "margin-top": 5,
+  "margin-left": 8,
+  "margin-right": 8,
+
+  "modules-left": [
+    "custom/bat",
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "custom/local-ip"
+  ],
+
+  "modules-right": [
+    "network",
+    "custom/bluetooth",
+    "custom/updates",
+    "clock",
+    "custom/power"
+  ],
+
+  "custom/bat": {
+    "format": "󰦟",
+    "tooltip": true,
+    "tooltip-format": "KANTO // HYPRLAND",
+    "on-click": "xdg-open https://github.com/NickHubDev/KnightRice.git"
+  },
+
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "HDMI-A-1": [1, 2, 3, 4]
+    },
+    "format": "{name}",
+    "format-icons": {
+      "active": "◆",
+      "default": "◇",
+      "urgent": "!"
+    },
+    "show-special": false,
+    "all-outputs": false,
+    "disable-scroll": true,
+    "on-click": "activate"
+  },
+
+  "custom/local-ip": {
+    "exec": "ip -4 -o addr show scope global | awk '!/docker|virbr|veth|br-/ {split($4,a,\"/\"); print a[1]; exit}'",
+    "interval": 30,
+    "format": "󰩟  {}",
+    "tooltip": true,
+    "tooltip-format": "IPV4 // DIRECCIÓN LOCAL",
+    "on-click": "bash -c 'ip -4 -o addr show scope global | awk \"!/docker|virbr|veth|br-/ {split(\\$4,a,\\\"/\\\"); print a[1]; exit}\" | wl-copy'"
+  },
+
+  "network": {
+    "interface": "wlan0",
+    "format-wifi": "󰖩  {essid}",
+    "format-ethernet": "󰈀  ETH",
+    "format-disconnected": "󰖪  OFF",
+    "tooltip-format-wifi": "{ifname} // {ipaddr}\nSeñal: {signalStrength}%",
+    "tooltip-format-ethernet": "{ifname} // {ipaddr}",
+    "interval": 5,
+    "on-click": "kitty -e nmtui"
+  },
+
+  "custom/bluetooth": {
+    "exec": "bluetoothctl show | grep -q 'Powered: yes' && echo '󰂯  ON' || echo '󰂲  OFF'",
+    "interval": 5,
+    "format": "{}",
+    "tooltip": true,
+    "tooltip-format": "BLUETOOTH // CONTROL",
+    "on-click": "kitty -e bluetuith"
+  },
+
+  "custom/updates": {
+    "exec": "checkupdates 2>/dev/null | wc -l",
+    "interval": 1800,
+    "format": "󰚰  {}",
+    "format-alt": "󰚰  Actualizar",
+    "tooltip": true,
+    "tooltip-format": "Paquetes pendientes de actualizar",
+    "on-click": "kitty -e bash -lc 'sudo pacman -Syu; read -rp \"Pulsa Enter para cerrar...\"'"
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "󰥔  {:%H:%M}",
+    "format-alt": "󰃭  {:%d/%m/%Y}",
+    "tooltip": true,
+    "tooltip-format": "{:%A, %d de %B de %Y}",
+    "on-click": "gnome-clocks"
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": true,
+    "tooltip-format": "Apagar / cerrar sesión",
+    "on-click": "wlogout"
+  }
+}

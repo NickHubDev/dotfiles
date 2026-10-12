@@ -1,0 +1,524 @@
+# ============================================================
+#                         NIZOLAX THEME
+# ============================================================
+#
+# Style:
+#   Pure Black / Deep Purple / Cold White
+#   High contrast · Technical · Minimal · Terminal
+#
+# Main palette:
+#   Black       #000000
+#   Deep Purple #0d0021
+#   Purple      #2f0077
+#   Violet      #3e117a
+#   White       #ffffff
+#
+# ============================================================
+
+
+# ============================================================
+#                         MAIN UI
+# ============================================================
+
+# Main background
+theme[main_bg]="#00000000"
+
+# Main title / headers
+theme[title]="#ffffff"
+
+# Highlight / accent color
+theme[hi_fg]="#3e117a"
+
+# Secondary highlight
+theme[hi_fg_alt]="#6b21a8"
+
+# Muted text
+theme[muted_fg]="#8b8295"
+
+# Very subtle text
+theme[dim_fg]="#514a58"
+
+# Normal foreground
+theme[fg]="#e8e2ec"
+
+
+# ============================================================
+#                       SELECTION
+# ============================================================
+
+# Selected item background
+theme[selected_bg]="#1b003e"
+
+# Selected item foreground
+theme[selected_fg]="#ffffff"
+
+# Selected item accent / border
+theme[selected_border]="#3e117a"
+
+# Hover / secondary selection
+theme[hover_bg]="#0d0021"
+
+# Hover foreground
+theme[hover_fg]="#ffffff"
+
+
+# ============================================================
+#                       BOX COLORS
+#                    [ FILL BOX ]
+# ============================================================
+
+# CPU
+theme[cpu_box]="#ffffff"
+
+# Memory
+theme[mem_box]="#ffffff"
+
+# Processes
+theme[proc_box]="#ffffff"
+
+# Network
+theme[net_box]="#ffffff"
+
+
+# ============================================================
+#                      BOX OUTLINES
+# ============================================================
+
+# Main box border
+theme[box_border]="#3e117a"
+
+# Active box border
+theme[box_border_active]="#6b21a8"
+
+# Inactive box border
+theme[box_border_inactive]="#24102f"
+
+
+# ============================================================
+#                      DIVIDER LINES
+# ============================================================
+
+# Main separators
+theme[div_line]="#ffffff"
+
+# Subtle separators
+theme[div_line_dim]="#241c29"
+
+# Strong separators
+theme[div_line_strong]="#3e117a"
+
+
+# ============================================================
+#                    TEMPERATURE GRAPH
+# ============================================================
+#
+# Cold / low:
+#   almost black purple
+#
+# Medium:
+#   deep violet
+#
+# High:
+#   saturated purple
+#
+# This keeps temperature visually related to the whole theme
+# instead of introducing orange/red into the interface.
+#
+
+theme[temp_start]="#0d0021"
+theme[temp_mid]="#230056"
+theme[temp_end]="#2f0077"
+
+# Temperature line
+theme[temp_line]="#6b21a8"
+
+# Temperature peak
+theme[temp_peak]="#a855f7"
+
+
+# ============================================================
+#                       CPU GRAPH
+# ============================================================
+#
+# CPU is intentionally WHITE.
+#
+# This makes CPU activity visually distinct from temperature,
+# memory and networking.
+#
+
+theme[cpu_start]="#ffffff"
+theme[cpu_mid]="#e7e4e8"
+theme[cpu_end]="#beb1b1"
+
+# CPU peak
+theme[cpu_peak]="#ffffff"
+
+# CPU line
+theme[cpu_line]="#ffffff"
+
+
+# ============================================================
+#                     MEMORY / RAM GRAPH
+# ============================================================
+#
+# Memory uses:
+#
+#   Low       → muted red
+#   Medium    → blue-violet
+#   High      → deep purple
+#
+# This creates a "system load" gradient without becoming
+# visually aggressive.
+#
+
+theme[free_start]="#9b2828"
+theme[free_mid]="#282891"
+theme[free_end]="#3b1d77"
+
+# Memory line
+theme[mem_line]="#6b5cff"
+
+# Memory peak
+theme[mem_peak]="#8b5cf6"
+
+
+# ============================================================
+#                     UPLOAD GRAPH
+# ============================================================
+#
+# Upload uses warm whites instead of purple.
+# This gives network traffic its own identity.
+#
+
+theme[upload_start]="#ffffff"
+theme[upload_mid]="#e8e2dc"
+theme[upload_end]="#dbc8c8"
+
+# Upload line
+theme[upload_line]="#ffffff"
+
+# Upload peak
+theme[upload_peak]="#ffffff"
+
+
+# ============================================================
+#                    DOWNLOAD GRAPH
+# ============================================================
+#
+# Download gets the purple identity of the interface.
+#
+
+theme[download_start]="#ffffff"
+theme[download_mid]="#d8c9e8"
+theme[download_end]="#3e117a"
+
+# Download line
+theme[download_line]="#6b21a8"
+
+# Download peak
+theme[download_peak]="#a855f7"
+
+
+# ============================================================
+#                      PROCESS COLORS
+# ============================================================
+
+# Normal process
+theme[proc_fg]="#ffffff"
+
+# Secondary process information
+theme[proc_secondary]="#9f95a8"
+
+# Running / active process
+theme[proc_active]="#6b21a8"
+
+# Warning process
+theme[proc_warning]="#8b5cf6"
+
+# Critical process
+theme[proc_critical]="#b91c1c"
+
+
+# ============================================================
+#                       CPU STATES
+# ============================================================
+
+# Idle CPU
+theme[cpu_idle]="#514a58"
+
+# User CPU
+theme[cpu_user]="#ffffff"
+
+# System CPU
+theme[cpu_system]="#d7deca"
+
+# I/O wait
+theme[cpu_iowait]="#6b21a8"
+
+# Steal / virtualization
+theme[cpu_steal]="#3e117a"
+
+
+# ============================================================
+#                     MEMORY STATES
+# ============================================================
+
+# Used memory
+theme[mem_used]="#6b21a8"
+
+# Cached memory
+theme[mem_cached]="#3b1d77"
+
+# Free memory
+theme[mem_free]="#282891"
+
+# Swap
+theme[mem_swap]="#9b2828"
+
+
+# ============================================================
+#                       NETWORK
+# ============================================================
+
+# Network labels
+theme[net_fg]="#ffffff"
+
+# Upload
+theme[net_upload]="#ffffff"
+
+# Download
+theme[net_download]="#6b21a8"
+
+# Network inactive
+theme[net_idle]="#514a58"
+
+# Network activity
+theme[net_active]="#a855f7"
+
+
+# ============================================================
+#                       DISK / STORAGE
+# ============================================================
+
+# Disk activity
+theme[disk_fg]="#ffffff"
+
+# Disk read
+theme[disk_read]="#d8c9e8"
+
+# Disk write
+theme[disk_write]="#6b21a8"
+
+# Disk idle
+theme[disk_idle]="#514a58"
+
+# Disk warning
+theme[disk_warning]="#8b5cf6"
+
+
+# ============================================================
+#                       TEMPERATURE
+# ============================================================
+
+# Normal temperature
+theme[temp_normal]="#ffffff"
+
+# Warm
+theme[temp_warm]="#6b21a8"
+
+# High
+theme[temp_high]="#a855f7"
+
+# Critical
+theme[temp_critical]="#b91c1c"
+
+
+# ============================================================
+#                         STATUS
+# ============================================================
+
+# Success
+theme[success]="#ffffff"
+
+# Information
+theme[info]="#6b21a8"
+
+# Warning
+theme[warning]="#8b5cf6"
+
+# Error
+theme[error]="#b91c1c"
+
+
+# ============================================================
+#                       PROGRESS BARS
+# ============================================================
+
+# Empty progress bar
+theme[progress_empty]="#1b1520"
+
+# CPU progress
+theme[progress_cpu]="#ffffff"
+
+# Memory progress
+theme[progress_mem]="#6b21a8"
+
+# Temperature progress
+theme[progress_temp]="#3e117a"
+
+# Network progress
+theme[progress_net]="#a855f7"
+
+
+# ============================================================
+#                         GRAPHS
+# ============================================================
+
+# Graph background
+theme[graph_bg]="#00000000"
+
+# Graph grid
+theme[graph_grid]="#17111c"
+
+# Graph axis
+theme[graph_axis]="#3e117a"
+
+# Graph labels
+theme[graph_text]="#8b8295"
+
+# Graph highlighted value
+theme[graph_value]="#ffffff"
+
+
+# ============================================================
+#                         ALERTS
+# ============================================================
+
+# Low-level alert
+theme[alert_low]="#3e117a"
+
+# Medium alert
+theme[alert_medium]="#6b21a8"
+
+# High alert
+theme[alert_high]="#a855f7"
+
+# Critical alert
+theme[alert_critical]="#b91c1c"
+
+
+# ============================================================
+#                       ACCENTS
+# ============================================================
+
+# Primary purple
+theme[purple]="#3e117a"
+
+# Bright purple
+theme[purple_bright]="#6b21a8"
+
+# Neon purple
+theme[purple_neon]="#a855f7"
+
+# Deep purple
+theme[purple_deep]="#1b003e"
+
+# Almost black purple
+theme[purple_black]="#0d0021"
+
+
+# ============================================================
+#                         TERMINAL
+# ============================================================
+
+# Prompt
+theme[prompt]="#6b21a8"
+
+# Command
+theme[command]="#ffffff"
+
+# Path
+theme[path]="#a855f7"
+
+# User
+theme[user]="#ffffff"
+
+# Host
+theme[host]="#6b21a8"
+
+# Root / privileged
+theme[root]="#b91c1c"
+
+
+# ============================================================
+#                         FOOTER
+# ============================================================
+
+theme[footer_fg]="#8b8295"
+theme[footer_active]="#ffffff"
+theme[footer_accent]="#3e117a"
+
+
+# ============================================================
+#                         LOGS
+# ============================================================
+
+# Normal log
+theme[log_normal]="#d8d2dc"
+
+# Debug
+theme[log_debug]="#514a58"
+
+# Info
+theme[log_info]="#6b21a8"
+
+# Warning
+theme[log_warning]="#8b5cf6"
+
+# Error
+theme[log_error]="#b91c1c"
+
+
+# ============================================================
+#                     SPECIAL ELEMENTS
+# ============================================================
+
+# Cursor
+theme[cursor]="#ffffff"
+
+# Cursor background
+theme[cursor_bg]="#3e117a"
+
+# Link
+theme[link]="#a855f7"
+
+# Link hover
+theme[link_hover]="#ffffff"
+
+# Search match
+theme[search]="#1b003e"
+
+# Search match text
+theme[search_fg]="#ffffff"
+
+
+# ============================================================
+#                       PALETTE
+# ============================================================
+
+theme[black]="#000000"
+theme[white]="#ffffff"
+
+theme[gray_1]="#17111c"
+theme[gray_2]="#241c29"
+theme[gray_3]="#514a58"
+theme[gray_4]="#8b8295"
+theme[gray_5]="#beb1b1"
+
+theme[purple_1]="#0d0021"
+theme[purple_2]="#1b003e"
+theme[purple_3]="#230056"
+theme[purple_4]="#2f0077"
+theme[purple_5]="#3e117a"
+theme[purple_6]="#6b21a8"
+theme[purple_7]="#a855f7"

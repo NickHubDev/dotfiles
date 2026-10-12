@@ -1,0 +1,45 @@
+/* Main colors */
+@define-color rosewater  #E0E0E0;
+@define-color flamingo   #C9C9C9;
+@define-color pink       #BDBABD;
+@define-color mauve      #A8A6A9;
+@define-color red        #B5A5A5;
+@define-color maroon     #998D8D;
+@define-color peach      #B4ACAC;
+@define-color yellow     #D0CCCC;
+@define-color green      #A4A9A4;
+@define-color teal       #929798;
+@define-color sky        #A5AAAD;
+@define-color sapphire   #8F9397;
+@define-color blue       #85898E;
+@define-color lavender   #BDBABD;
+
+/* Text */
+@define-color text       #D4D4D6;
+@define-color subtext1   #B8B8BA;
+@define-color subtext0   #99999C;
+
+/* Overlays */
+@define-color overlay2   #747477;
+@define-color overlay1   #5C5C5F;
+@define-color overlay0   #48484A;
+
+/* Surfaces */
+@define-color surface2   #414143;
+@define-color surface1   #303032;
+@define-color surface0   #262628;
+
+/* Backgrounds */
+@define-color base       #202022;
+@define-color mantle     #141415;
+@define-color crust      #09090A;
+
+/* Compatibility with existing Waybar CSS */
+@define-color accent     @lavender;
+@define-color fg         @text;
+@define-color fg_alt     @subtext1;
+@define-color bg_0       @crust;
+@define-color bg_1       @mantle;
+@define-color bg_2       @base;
+@define-color bg_alt     @surface0;
+@define-color shadow     @crust;
